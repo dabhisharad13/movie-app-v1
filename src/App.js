@@ -5,6 +5,7 @@ import React from "react";
 import { Layout } from "./components/Layout";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
+import HeaderNav from "./components/header/HeaderNav";
 
 function App() {
   const [movies, setMovies] = useState();
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      <HeaderNav/>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home movies={movies} />}></Route>
